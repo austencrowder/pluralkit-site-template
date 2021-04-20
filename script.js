@@ -27,7 +27,7 @@ var pkmJSON = {
 };
 
 
-var alters = [];
+var alters = new Map(); // going to use map for this. :)
 
 //alter constructor. used to build objects to push into the array.
 function alter(id, displayName, name, age, pronouns, prefix, suffix, avatarURL, description){

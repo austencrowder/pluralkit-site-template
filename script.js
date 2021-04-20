@@ -26,23 +26,18 @@ var pkmJSON = {
   suffix: null
 };
 
-var alters = new Map(); // going to use map for this. :)
-
-//alter constructor. used to build objects to push into the array.
-function alter(
-  id,
-  displayName,
-  name,
-  age,
-  pronouns,
-  prefix,
-  suffix,
-  avatarURL,
-  description
-) {}
+const memberDiv = `
+ <div class="${alter.id}">
+    <h2>
+        ${alter.name}
+    </h2>
+    <p class="location">${alter.city}</p>
+    <p class="bio">${alter.bio}</p>
+ </div>
+`;
 
 //builds a single row of a div?
-function buildMemberDiv() {}
+function buildMemberDiv(alter) {}
 
 function renderSite() {}
 

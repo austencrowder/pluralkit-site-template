@@ -10,3 +10,12 @@ but I know we gotta work so I'm gonna write out what i want this to do
 * Easy to follow readme
 * Really simple, well-commented CSS
 * credit for me :)
+
+HTML template:
+
+Div id=member id
+Name display_name !? name:
+Avatar (img, float right, round, use avatar url)
+Age:
+Pronouns:
+Description:

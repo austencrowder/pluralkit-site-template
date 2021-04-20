@@ -27,8 +27,12 @@ var pkmJSON = {
 };
 
 
-//given
-function parseMember (memberJSON) {};1
+var alters = [];
+
+//alter constructor. used to build objects to push into the array.
+function alter(id, displayName, name, age, pronouns, prefix, suffix, avatarURL, description){
+  
+};
 
 //builds a single row of a div?
 function buildMemberDiv() {};

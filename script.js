@@ -30,6 +30,7 @@ var pkmJSON = {
 //given
 function parseMember (memberJSON) {};1
 
+//builds a single row of a div?
 function buildMemberDiv() {};
 
 function renderSite() {};

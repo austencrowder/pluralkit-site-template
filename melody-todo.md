@@ -14,7 +14,7 @@ but I know we gotta work so I'm gonna write out what i want this to do
 HTML template:
 
 Div id=member id
-Name display_name !? name:
+Name (display_name != null) ? display_name : name
 Avatar (img, float right, round, use avatar url)
 Age:
 Pronouns:

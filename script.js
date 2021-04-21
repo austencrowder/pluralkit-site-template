@@ -4,7 +4,7 @@ var alter = {
   color: null,
   display_name: null,
   birthday: "1984-01-01",
-  pronouns: null,
+  pronouns: "she/her",
   avatar_url:
     "https://media.discordapp.net/attachments/771384008360722474/815297186237251594/482731_JCRh7z9I.png?width=256&height=256",
   description: "Primary fronter, gets stuff done, loves lifting",
@@ -26,8 +26,6 @@ var alter = {
   suffix: null
 };
 
-
-
 const alterDiv = `
 <div id="${alter.id}" class="row">
       <img
@@ -36,26 +34,40 @@ const alterDiv = `
         class="avatar"
       />
 
-      <h2>${alter.display_name==="null" ? alter.display_name : alter.name}</h2>
+      <h2>${alter.display_name === null ? alter.name : alter.display_name}</h2>
 
-      ${`<h3>
+      ${
+        alter.pronouns === null
+          ? ""
+          : `<h3>
         Pronouns
       </h3>
       <p>
         ${alter.pronouns}
-      </p>` || ""}
-      <h3>
+      </p>`
+      }
+     
+     ${
+       alter.description === null
+         ? ""
+         : `<h3>
                 Description
       </h3>
       <p>
         ${alter.description}
-      </p>
+      </p>`
+     }
       <a href="#contents">Back</a>
     </div>
-    `
+    `;
 
-//builds a single row of a div?
-function buildMemberDiv(alter) {}
+
+
+//Builds toc
+
+function toc(pkOutput) {
+  let template 
+}
 
 function renderSite() {}
 document.body.innerHTML = alterDiv;

@@ -1,33 +1,4 @@
-var addie = {
-  id: "nhzfx",
-  name: "Addie ☔️ (they/she)",
-  color: null,
-  display_name: null,
-  birthday: "1984-01-01",
-  pronouns: "she/her",
-  avatar_url:
-    "https://media.discordapp.net/attachments/771384008360722474/815297186237251594/482731_JCRh7z9I.png?width=256&height=256",
-  description: "Primary fronter, gets stuff done, loves lifting",
-  proxy_tags: [
-    { prefix: "Addie ", suffix: null },
-    { prefix: "☔️ ", suffix: null }
-  ],
-  keep_proxy: false,
-  privacy: null,
-  visibility: null,
-  name_privacy: null,
-  description_privacy: null,
-  birthday_privacy: null,
-  pronoun_privacy: null,
-  avatar_privacy: null,
-  metadata_privacy: null,
-  created: "2020-10-12T20:22:29.817725Z",
-  prefix: "Addie ",
-  suffix: null
-};
-
 //takes a single member object from PK and returns formatted html as template literal
-
 function buildMemberDiv(member) {
   return `
 <div id="${member.id}" class="row">
@@ -68,18 +39,12 @@ function buildMemberDiv(member) {
 }
 
 //Builds toc
-function toc(pkOutput) {
-  //just test data for now.
-  let member = { id: "123", display_name: null, name: "Addie" };
-
-  let memberTemplate = `
+function toc(member) {
+    return `
     <a href="#${member.id}">${
     member.display_name === null ? member.name : member.display_name
-  }</a>
+  }</a></br>
   `;
-  let contents = [];
-
-  return memberTemplate;
 }
 
 function renderSite(pkSysID) {
@@ -88,22 +53,25 @@ function renderSite(pkSysID) {
     .then(data => {
       //build TOC - just iterate over each data[].id
       console.log(data);
-     data.map(function(memberNum){
-       console.log("data array looks like " data[memberNum])
-       buildMemberDiv(data[memberNum])
-     })
-      console.log(members)
-     //map function goes here
-      //call template function
-      //join array
-      //input into members div
+    let contents = []  
+    let members = []
+      data.map(
+        //memberNum =>
+        memberNum => {
+          members.push(buildMemberDiv(memberNum))
+          contents.push(toc(memberNum))  
+        }
+        )
+    console.log(contents);  
+    console.log(members);
+      document.body.innerHTML=contents.join('')+""<>"members.join('')
     });
 }
 
 //renderSite("ikgki");
 
-document.body.innerHTML = buildMemberDiv(addie);
-renderSite("ikgki")
+
+renderSite("ikgki");
 
 //    return `
 //    ${data.map(function(member){

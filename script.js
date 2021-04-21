@@ -64,10 +64,19 @@ const alterDiv = `
 
 
 //Builds toc
-
 function toc(pkOutput) {
-  let template 
+//just test data for now.
+  let member = {id: "123", display_name: null, name: "Addie"}
+  
+  let memberTemplate = `
+    <a href="#${member.id}">${member.display_name === null ? member.name : member.display_name}</a>
+  `
+  let contents = [];
+  
+  return memberTemplate;
 }
 
+
+
 function renderSite() {}
-document.body.innerHTML = alterDiv;
+document.body.innerHTML = toc(alter) + alterDiv;

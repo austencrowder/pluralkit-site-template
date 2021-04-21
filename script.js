@@ -61,22 +61,29 @@ const alterDiv = `
     </div>
     `;
 
-
-
 //Builds toc
 function toc(pkOutput) {
-//just test data for now.
-  let member = {id: "123", display_name: null, name: "Addie"}
-  
+  //just test data for now.
+  let member = { id: "123", display_name: null, name: "Addie" };
+
   let memberTemplate = `
-    <a href="#${member.id}">${member.display_name === null ? member.name : member.display_name}</a>
-  `
+    <a href="#${member.id}">${
+    member.display_name === null ? member.name : member.display_name
+  }</a>
+  `;
   let contents = [];
-  
+
   return memberTemplate;
 }
 
+function renderSite(pkSysID) {
+  fetch("https://api.pluralkit.me/v1/s/" + pkSysID + "/members")
+    .then(response => response.json())
+    .then(data.map() => {
+    console.log(data)
+    data.map(data )
+    
+  });
+}
 
-
-function renderSite() {}
-document.body.innerHTML = toc(alter) + alterDiv;
+document.body.innerHTML = toc(alter) + renderSite("ikgki") + alterDiv;

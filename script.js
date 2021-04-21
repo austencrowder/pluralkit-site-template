@@ -36,25 +36,19 @@ const alterDiv = `
         class="avatar"
       />
 
-      <h2>${alter.name}</h2>
+      <h2>${alter.display_name==="null" ? alter.display_name : alter.name}</h2>
 
-      <h3>
-        Description
-      </h3>
-      <p>
-        ${alter.description}
-      </p>
-      <h3>
-        Age
-      </h3>
-      <p>
-        ${alter.age}
-      </p>
-       <h3>
+      ${`<h3>
         Pronouns
       </h3>
       <p>
         ${alter.pronouns}
+      </p>` || ""}
+      <h3>
+                Description
+      </h3>
+      <p>
+        ${alter.description}
       </p>
       <a href="#contents">Back</a>
     </div>

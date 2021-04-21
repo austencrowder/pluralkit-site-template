@@ -26,6 +26,7 @@ var member = {
   suffix: null
 };
 
+/*
 const memberDiv = `
 <div id="${memberNumber.id}" class="row">
       <img
@@ -60,6 +61,7 @@ const memberDiv = `
       <a href="#contents">Back</a>
     </div>
     `;
+*/
 
 //Builds toc
 function toc(pkOutput) {
@@ -79,14 +81,18 @@ function toc(pkOutput) {
 function renderSite(pkSysID) {
   fetch("https://api.pluralkit.me/v1/s/" + pkSysID + "/members")
     .then(response => response.json())
-    .then(data => {
-    
-    
-    return `
-      ${data.map(function(member){
-        <p>Next up: ${</p>`
-      }).join()};
-    });
+    .then(data => {console.log(data)
+                  document.body.innerHTML = JSON.stringify(data)
+                   //map function goes here
+                   //call template function
+                   //join array
+                   //input into members div
+                  })
 }
 
-document.body.innerHTML = toc(alter) + renderSite("ikgki") + alterDiv;
+renderSite("ikgki")
+
+//    return `
+  //    ${data.map(function(member){
+    //    `<p>Next up: ${member.id}</p>`
+      //}).join()};`

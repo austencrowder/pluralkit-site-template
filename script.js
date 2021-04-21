@@ -64,14 +64,15 @@ function renderSite(pkSysID) {
         )
     console.log(contents);  
     console.log(members);
-      document.body.innerHTML=contents.join('')+""<>"members.join('')
+    document.getElementById('toc').innerHTML=contents.join('')
+    document.getElementById('members').innerHTML=members.join('')
     });
 }
 
 //renderSite("ikgki");
 
 
-renderSite("ikgki");
+renderSite("zybfv");
 
 //    return `
 //    ${data.map(function(member){

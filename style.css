@@ -9,3 +9,27 @@ h1 {
   font-style: italic;
   color: #373fff;
 }
+
+div.toc {
+  margin: 0 auto;
+  outline: solid;
+  outline-color: black;
+  color: orange;
+  max-width: 400px;
+  min-width: 150px;
+   margin-top: 5%;
+  margin-bottom: 5%;
+  padding: 20px ;
+}
+
+div.row {
+  margin: 0 auto;
+  outline: solid;
+  outline-color: black;
+  color: black;
+  max-width: 400px;
+  min-width: 150px;
+   margin-top: 5%;
+  margin-bottom: 5%;
+  padding: 20px ;
+}

@@ -26,7 +26,7 @@ var pkmJSON = {
   suffix: null
 };
 
-const memberDiv = `
+const testDiv = `
  <div class="${alter.id}">
     <h2>
         ${alter.name}
@@ -35,6 +35,61 @@ const memberDiv = `
     <p class="bio">${alter.bio}</p>
  </div>
 `;
+
+const alterDiv = `
+<div id="Talia" class="row">
+      <img
+        src="https://cdn.glitch.com/20540af7-c942-4351-9a89-cd33ee5c95a8%2Ftalia.png?v=1608828192966"
+        alt="talia"
+        class="avatar"
+      />
+
+      <h1>Talia ✨</h1>
+
+      <h3>
+        About me
+      </h3>
+      <p>
+        I'm the first alter Addie discovered when exploring her system in 2020,
+        and am sort of the person she was protecting from the world. Of all of
+        us, I have the most contiguous memory of our history. I take care of our
+        social connections outside of work. I'm also the one that spends the
+        most time in the body, so if you've ever met us out and about you
+        probably met me.
+      </p>
+      <h3>
+        Age/Pronouns
+      </h3>
+      <p>
+        Body's age, she/her
+      </p>
+      <h3>
+        Likes/Dislikes
+      </h3>
+      <p>
+        + Dancing <br />
+        + JRPGs<br />
+        + Making fun things<br />
+        - Bothering other people with my problems<br />
+      </p>
+      <h3>
+        You've probably met me if...
+      </h3>
+      <p>
+        If we're friends, you've already met me. Outside of work and social
+        gatherings with people that we don't know, I'm usually the one that
+        starts out in front.
+      </p>
+      <h3>
+        Hit me up if you want to...
+      </h3>
+      <p>
+        Be a friend! To be honest if you're reading this page we're already
+        super friendly so uh, just keep doing what you're doing.
+      </p>
+      <a href="#contents">Back</a>
+    </div>
+    `
 
 //builds a single row of a div?
 function buildMemberDiv(alter) {}

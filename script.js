@@ -1,4 +1,4 @@
-var alter = {
+var member = {
   id: "nhzfx",
   name: "Addie ☔️ (they/she)",
   color: null,
@@ -26,35 +26,35 @@ var alter = {
   suffix: null
 };
 
-const alterDiv = `
-<div id="${alter.id}" class="row">
+const memberDiv = `
+<div id="${memberNumber.id}" class="row">
       <img
-        src="${alter.avatar_url}"
-        alt="${alter.name}"
+        src="${memberNumber.avatar_url}"
+        alt="${memberNumber.name}"
         class="avatar"
       />
 
-      <h2>${alter.display_name === null ? alter.name : alter.display_name}</h2>
+      <h2>${memberNumber.display_name === null ? memberNumber.name : memberNumber.display_name}</h2>
 
       ${
-        alter.pronouns === null
+        memberNumber.pronouns === null
           ? ""
           : `<h3>
         Pronouns
       </h3>
       <p>
-        ${alter.pronouns}
+        ${memberNumber.pronouns}
       </p>`
       }
      
      ${
-       alter.description === null
+       memberNumber.description === null
          ? ""
          : `<h3>
                 Description
       </h3>
       <p>
-        ${alter.description}
+        ${memberNumber.description}
       </p>`
      }
       <a href="#contents">Back</a>
@@ -79,11 +79,14 @@ function toc(pkOutput) {
 function renderSite(pkSysID) {
   fetch("https://api.pluralkit.me/v1/s/" + pkSysID + "/members")
     .then(response => response.json())
-    .then(data.map() => {
-    console.log(data)
-    data.map(data )
+    .then(data => {
     
-  });
+    
+    return `
+      ${data.map(function(member){
+        <p>Next up: ${</p>`
+      }).join()};
+    });
 }
 
 document.body.innerHTML = toc(alter) + renderSite("ikgki") + alterDiv;

@@ -1,3 +1,7 @@
+//pulls parm, if it exists, and tries to render the site.
+console.log(URLSearchParams.get(sysid))
+
+
 //takes a single member object from PK and returns formatted html as template literal
 function buildMemberDiv(member) {
   return `

@@ -14,18 +14,22 @@
     <script src="/script.js" defer></script>
   </head>
   <body>
+  
+    
     <div id="input">
-      <form><label for="pkSysId">Input your system ID:</label> <input type="text" id="pkSysId" />
+      <form><label for="pkSysId">Input your system ID:</label> <input name="sysId" type="text" id="pkSysId" />
       <button onClick="tryGenerate()">
         Generate
         </button></form>
+   
       <script type="text/javascript">
         function tryGenerate() {
-          let sysKey=document.getElementById()
+          let sysKey=document.getElementById("pkSysId").value;
+          renderSite(sysKey);
         }
       </script>
     </div>
-    
+   
     
     <div id="toc" class="toc"></div>
     <div id="members" class="row">

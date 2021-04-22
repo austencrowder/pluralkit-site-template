@@ -74,9 +74,24 @@ function renderSite(pkSysID) {
     });
 }
 
+function getFronter(sysId) {
+  var fronter = "";
+
+      fetch("https://api.pluralkit.me/v1/s/" + sysId + "/fronters")
+        .then(response => response.json())
+        .then(data => {
+          fronter = data.members[0].display_name;
+          ava = data.members[0].avatar_url;
+          document.getElementById("fronter").innerHTML = `<h2>Currently up:</h2>
+                      <img
+        src="${ava}"
+        alt="${fronter}"
+        class="avatar"
+      />
+        <p> ${fronter}</p>`
+      });
+}
+
+getFronter(sysId)
 renderSite(sysId)
 
-//    return `
-//    ${data.map(function(member){
-//    `<p>Next up: ${member.id}</p>`
-//}).join()};`

@@ -33,3 +33,9 @@ div.row {
   margin-bottom: 5%;
   padding: 20px ;
 }
+
+.avatar {
+  float: right;
+  width: 25%;
+  border-radius: 50%;
+}

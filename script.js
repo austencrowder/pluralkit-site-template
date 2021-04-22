@@ -80,18 +80,21 @@ function getFronter(sysId) {
       fetch("https://api.pluralkit.me/v1/s/" + sysId + "/fronters")
         .then(response => response.json())
         .then(data => {
-          fronter = data.members[0].display_name;
-          ava = data.members[0].avatar_url;
-          document.getElementById("fronter").innerHTML = `<h2>Currently up:</h2>
+          let fronter = data.members[0].name;
+          let ava = data.members[0].avatar_url;
+          console.log(data.members[0].display_name);
+        document.getElementById("fronter").innerHTML = `
                       <img
         src="${ava}"
         alt="${fronter}"
         class="avatar"
       />
+      <h2>Currently up:</h2>
         <p> ${fronter}</p>`
       });
 }
 
 getFronter(sysId)
 renderSite(sysId)
+
 

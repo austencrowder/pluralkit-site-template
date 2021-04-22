@@ -38,7 +38,7 @@ function buildMemberDiv(member) {
         ${member.description}
       </p>`
      }
-      <a href="#contents">Back</a>
+      <a href="#toc">Back</a>
     </div>
     `;
 }
@@ -82,6 +82,7 @@ function getFronter(sysId) {
         .then(data => {
           let fronter = data.members[0].name;
           let ava = data.members[0].avatar_url;
+          let id = data.members[0].id;
           console.log(data.members[0].display_name);
         document.getElementById("fronter").innerHTML = `
                       <img
@@ -90,7 +91,7 @@ function getFronter(sysId) {
         class="avatar"
       />
       <h2>Currently up:</h2>
-        <p> ${fronter}</p>`
+        <p>${fronter}</p>`
       });
 }
 

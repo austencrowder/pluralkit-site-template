@@ -1,37 +1,14 @@
-Welcome to Glitch
-=================
+# PluralKit site template
 
-Click `Show` in the header to see your app live. Updates to your code will instantly deploy and update live.
+Hello!
 
-**Glitch** is the friendly community where you'll build the app of your dreams. Glitch lets you instantly create, remix, edit, and host an app, bot or site, and you can invite collaborators or helpers to simultaneously edit code with you.
+This prototype will generate a website of system members and descriptions based on descriptions, pronouns, and names provided in pluralkit.
 
-Find out more [about Glitch](https://glitch.com/about).
+* The site will prefer showing display name over name. If display name is blank, name will be used.
+* The site will skip any fields that are not filled out.
+* The site will not show any system members set to private. If you want to update your system, try [this lovely glitch]("https://pluralkit-panel.glitch.me/")
+* The site has the most rudimentary CSS imaginable - any fixes are welcome 😰
 
+I'm still learning the ropes of modern programming - my last stint was in 1999 - so any ideas are welcome. Have fun!
 
-Your Project
-------------
-
-### ← README.md
-
-That's this file, where you can tell people what your cool website does and how you built it.
-
-### ← index.html
-
-Where you'll write the content of your website. 
-
-### ← style.css
-
-CSS files add styling rules to your content.
-
-### ← script.js
-
-If you're feeling fancy you can add interactivity to your site with JavaScript.
-
-### ← assets
-
-Drag in `assets`, like images or music, to add them to your project
-
-Made by [Glitch](https://glitch.com/)
--------------------
-
-\ ゜o゜)ノ
+~Melody Tucker of the Arcade System

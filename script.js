@@ -1,7 +1,7 @@
 //pulls parm, if it exists, and tries to render the site.
 const queryString = window.location.search;
 const urlParams = new URLSearchParams(queryString);
-const sysId = urlParams.get('sysId') || "ikgki"
+const sysId = urlParams.get('sysId') || "exmpl"
 
 //takes a single member object from PK and returns formatted html as template literal
 function buildMemberDiv(member) {

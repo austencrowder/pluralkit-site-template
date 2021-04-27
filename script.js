@@ -1,7 +1,7 @@
 //pulls parm, if it exists, and tries to render the site.
 const queryString = window.location.search;
 const urlParams = new URLSearchParams(queryString);
-const sysId = urlParams.get('sysId')
+const sysId = urlParams.get('sysId') || "ikgki"
 
 //takes a single member object from PK and returns formatted html as template literal
 function buildMemberDiv(member) {
@@ -95,6 +95,17 @@ function getFronter(sysId) {
       });
 }
 
+function getSystemName(sysId) {
+  fetch("https://api.pluralkit.me/v1/s/" + sysId)
+        .then(response => response.json())
+        .then(data => {
+          let system = data.name;
+          document.getElementById("system").innerHTML = "<h1>" + system + "</h1>";
+          });
+}
+
+
+getSystemName(sysId)
 getFronter(sysId)
 renderSite(sysId)
 
